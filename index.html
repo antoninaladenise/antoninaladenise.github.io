@@ -1,36 +1,144 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-	<title>Stage officiel des pompiers de Morlais</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href="style.css" rel="stylesheet" type="text/css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="menu">
-		<h1>Sapeurs pompiers de Morlais</h1>
-		<ul>
-			<li><a href="./pages/centre.html">Le centre</a></li>
-			<li><a href="./pages/stats.html">Les stats </a></li>
-		</ul>
-	</div>
-	
-	<div id="centre">
-		<fieldset>
-		<legend>Comment appeler les pompiers ?</legend>
-		<h2>Composer le 18 ou le 112 (numéro d'urgence européen).</h2>
-		<h2>Composer uniquement ces numéros pour les urgences graves</h2>
-		<h2>Autres numéros d'urgence : 15 samu - 17 police</h2>
-		<h2>En cas de sinistre, indiquer :</h2>
-		<ul>
-			<li class="cligno">La nature du sinistre</li>
-			<li class="cligno">Le lieu</li>
-			<li class="cligno">Le nombre de victimes et leurs états</li>
-		</ul>
-		<center>
-		<!--photographie du centre du secours -->
-		<img src="C:\Users\aaladeni\Downloads\pompiers\photos\centre.jpg" alt="centre de pompiers" />
-		</center>
-		</fieldset>
-	</div>
+
+<nav>
+  <span class="nav-brand" onclick="showSection('accueil')">Antonin ALADENISE</span>
+  <ul class="nav-links">
+    <li><a onclick="showSection('accueil')" class="active">Accueil</a></li>
+    <li><a onclick="showSection('projets')">Projets</a></li>
+    <li><a onclick="showSection('apropos')">À propos</a></li>
+    <li><a onclick="showSection('contact')">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="accueil" class="active">
+  <h1>
+    <span>Bonjour, je suis</span><br>
+    <span style="color:var(--mid); font-weight:400">Antonin ALADENISE</span>
+  </h1>
+  <p class="hero-tagline">
+    Étudiant en première année de BUT Science des Données
+  </p>
+
+  <div class="hero-cta">
+    <a class="btn" onclick="showSection('projets')">Mes projets</a>
+    <a class="btn" onclick="showSection('apropos')">À propos de moi</a>
+    <a class="btn" onclick="showSection('contact')">Me contacter</a>
+  </div>
+</section>
+
+<!-- ══════════ PROJETS ══════════ -->
+<section id="projets">
+  <h2>Mes projets</h2>
+  <p>Projets universitaires réalisés en première année</p>
+
+  <hr class="rule">
+
+  <div class="project-grid">
+    <div class="project-card">
+      <span class="project-tag">Python</span>
+      <h3>Gestion de fichiers Python</h3>
+      <p>Transformation d'un fichier JSON de mesures de polluants atmosphériques en CSV exploitable. Nettoyage des données, conversion des dates au format français et structuration selon cahier des charges.</p>
+    </div>
+    <div class="project-card">
+      <span class="project-tag">Sphinx / Word</span>
+      <h3>Mise en œuvre d'une enquête</h3>
+      <p>Conception d'une enquête complète sur l'influence des réseaux sociaux sur les comportements de consommation. Création d'un questionnaire structuré en 4 parties avec listes déroulantes et analyse statistique.</p>
+    </div>
+    <div class="project-card">
+      <span class="project-tag">Excel VBA</span>
+      <h3>Création d'un reporting - Gestion des notes BUT SD1</h3>
+      <p>Outil Excel personnalisé pour la gestion des notes de l'année. Saisie par semestre, graphiques de suivi, et décision de jury automatisée basée sur les règles de validation de compétences.</p>
+    </div>
+    <div class="project-card">
+      <span class="project-tag">Excel / Python / Word</span>
+      <h3>Analyse de données, Reporting et Datavisualisation - Laboratoire Qualyse</h3>
+      <p>Outil dynamique d'analyse des résultats PCR sur élevages. Tableaux de bord automatisés, indicateurs clés, classification en 8 classes et intégration de nouveaux jeux de données.</p>
+    </div>
+    <div class="project-card">
+      <span class="project-tag">Python / SQL</span>
+      <h3>GreenSD - Livraison bas-carbone</h3>
+      <p>Conception et implémentation d'une base de données relationnelle. Modélisation MCD/MLD, nettoyage via Python, requêtes SQL et interface Tkinter avec suivi des émissions CO2.</p>
+    </div>
+    <div class="project-card">
+      <span class="project-tag">Excel / Word</span>
+      <h3>Fleury-Michon - Indicateurs de performance</h3>
+      <p>Analyse financière du groupe Fleury-Michon (2019-2022). Calcul des taux de variation, profitabilité et indicateurs par salarié. Visualisations graphiques et analyse commentée.</p>
+    </div>
+  </div>
+</section>
+
+<section id="apropos">
+  <h2>À propos de moi</h2>
+
+  <div class="about-grid">
+    <div>
+      <p>
+        Je m'appelle Antonin ALADENISE. Je suis étudiant en BUT Science des données à l'Université de Poitiers.
+      </p>
+      <p>
+        Cette formation me permet d'approfondir mes compétences dans plusieurs domaines tels que la programmation, les mathématiques, et l'utilisation d'outils de data visualization.
+      </p>
+
+      <hr class="rule">
+
+      <h3>Formation</h3>
+      <br>
+      <p style="font-size:14px; color:var(--mid); margin-bottom:6px;">
+        <strong>BUT Science des Données</strong>&ensp;<span style="color:var(--light)">— IUT de Niort, Université de Poitiers</span>
+      </p>
+    </div>
+
+    <div>
+      <h3>Compétences</h3>
+      <ul class="skill-list">
+        <li>Python</li>
+        <li>SQL</li>
+        <li>Excel</li>
+        <li>VBA</li>
+        <li>R</li>
+        <li>Power BI</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Me contacter</h2>
+  <p>Vous avez un projet ou une question ? Écrivez-moi directement.</p>
+
+  <hr class="rule">
+
+  <div class="contact-row">
+    <span class="clabel">Email</span>
+    <a href="#">aladenise.antonin@gmail.com</a>
+  </div>
+  <div class="contact-row">
+    <span class="clabel">Téléphone</span>
+    <span>+33 7 69 44 37 62</span>
+  </div>
+  <div class="contact-row">
+    <span class="clabel">GitHub</span>
+    <a href="#">github.com/antoninaladenise</a>
+  </div>
+</section>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    const t = document.getElementById(id);
+    if (t) t.classList.add('active');
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('onclick') && a.getAttribute('onclick').includes(id));
+    });
+  }
+</script>
 </body>
 </html>
